@@ -1,8 +1,8 @@
 {
     "name":"photoalbum",
-    "version":"0.0.1",
+    "version":"0.0.2",
     "author":"Christian,Didier,Sebastian",
-    "location":"https://github.com/coldbox-templates/advanced-script/archive/v0.0.1.zip",
+    "location":"https://github.com/coldbox-templates/advanced-script/archive/v0.0.2.zip",
     "slug":"photoalbum",
     "createPackageDirectory":false,
     "type":"mvc",
