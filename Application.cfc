@@ -47,7 +47,13 @@ component{
 		application.cbBootstrap.loadColdbox();
 		return true;
 	}
-
+	//Register interceptors as an array, we need order
+	interceptors = [
+		//SES
+		{class="coldbox.system.interceptors.SES"},
+		// Security
+		{ class="interceptors.securityInterceptor" }
+	];
 	// application end
 	public void function onApplicationEnd( struct appScope ){
 		arguments.appScope.cbBootstrap.onApplicationEnd( arguments.appScope );
