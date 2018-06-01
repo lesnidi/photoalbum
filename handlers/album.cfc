@@ -40,6 +40,7 @@ component{
 		prc.data=albumService.getAll();
 		event.setView( "album/index" );
 	}
+	
 
 	/**
 	* new
@@ -54,6 +55,16 @@ component{
 	function save( event, rc, prc ){
 		event.setView( "album/save" );
 	}
+
+	
+	/**
+	* edit
+	*/
+	function edit( event, rc, prc ){
+		prc.data=albumService.get(#rc.id#);
+		event.setView( "album/edit" );
+	}
+	
 
 	/**
 	* delete

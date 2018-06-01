@@ -31,17 +31,21 @@ component accessors="true"{
 	/**
 	* getAll (en fonction des mes droits, soit je suis le proprio soit j'ai les droits)
 	*/
-	function getAll(){
-   		
+	function getAll( ){
+   		return queryExecute(
+			"SELECT * FROM album ");
 	}
 
 
 	/**
 	* get
 	*/
-	function get(){
-		
+	 function get( required id ){
+		return queryExecute(
+			"SELECT * FROM album where id=#arguments.id#");
 	}
+
+	
 
 
 }
