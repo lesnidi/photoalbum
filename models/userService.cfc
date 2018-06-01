@@ -31,12 +31,12 @@ component accessors="true"{
 	/**
 	* getAll
 	*/
-	function getAll(){
+	any function getAll(){
 		qUsers = queryExecute(
-			"selectT * 
-			 from user"
+			"select * 
+			from user"
 		);
-		writeDump(prc.qUsers);
+		
 		return qUsers;
 	}
 

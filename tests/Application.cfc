@@ -19,4 +19,18 @@ component{
 	rootPath = REReplaceNoCase( this.mappings[ "/tests" ], "tests(\\|/)", "" );
 	this.mappings["/root"]   = rootPath;
 
+	
+	this.datasources["album"] = {
+		class: 'com.mysql.cj.jdbc.Driver'
+	  , bundleName: 'com.mysql.cj'
+	  , connectionString: 'jdbc:mysql://localhost:3306/albums?useUnicode=true&characterEncoding=UTF-8&useLegacyDatetimeCode=true'
+	  , username: 'root'
+	  , password: ''
+	  
+	  // optional settings
+	  , connectionLimit:100 // default:-1
+  };
+
+	this.datasource = "album";
+	  
 }
