@@ -4,6 +4,8 @@
 * ---
 */
 component{
+
+	// add modification for test
 	// Application properties
 	this.name = hash( getCurrentTemplatePath() );
 	this.sessionManagement = true;
