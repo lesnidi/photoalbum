@@ -3,9 +3,6 @@
 * www.ortussolutions.com
 * ---
 */
-
-
-
 component{
 	// Application properties
 	this.name = hash( getCurrentTemplatePath() );
@@ -29,6 +26,19 @@ component{
 	// COLDBOX APPLICATION KEY OVERRIDE
 	COLDBOX_APP_KEY 		 = "";
 
+	this.datasources["album"] = {
+		class: 'com.mysql.cj.jdbc.Driver'
+	  , bundleName: 'com.mysql.cj'
+	  , connectionString: 'jdbc:mysql://localhost:3306/album?useUnicode=true&characterEncoding=UTF-8&useLegacyDatetimeCode=true'
+	  , username: 'root'
+	  , password: "encrypted:6a3e5325ffeaafd4bb0247c183c9f1f3ce068b4d59405a1dfd887a1fdff0342d"
+	  
+	  // optional settings
+	  , connectionLimit:100 // default:-1
+  };
+
+	this.datasource = "album";
+	  
 	// application start
 	public boolean function onApplicationStart(){
 		application.cbBootstrap = new coldbox.system.Bootstrap( COLDBOX_CONFIG_FILE, COLDBOX_APP_ROOT_PATH, COLDBOX_APP_KEY, COLDBOX_APP_MAPPING );
