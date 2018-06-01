@@ -37,7 +37,7 @@ component{
 	* index
 	*/
 	function index( event, rc, prc ){
-		prc=albumService.getAll();
+		prc.data=albumService.getAll();
 		event.setView( "album/index" );
 	}
 
