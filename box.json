@@ -39,10 +39,10 @@
     },
     "cfmigrations":{
         "connectionInfo":{
-            "password":"${DB_PASSWORD}",
-            "connectionString":"${DB_CONNECTIONSTRING}",
-            "class":"${DB_CLASS}",
-            "username":"${DB_USER}"
+            "password":"encrypted:6a3e5325ffeaafd4bb0247c183c9f1f3ce068b4d59405a1dfd887a1fdff0342d",
+            "connectionString":"jdbc:mysql://localhost:3306/album?useUnicode=true&characterEncoding=UTF-8&useLegacyDatetimeCode=true",
+            "class":"com.mysql.cj",
+            "username":"root"
         },
         "defaultGrammar":"AutoDiscover"
     }
