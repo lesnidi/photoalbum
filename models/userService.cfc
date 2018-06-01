@@ -32,7 +32,12 @@ component accessors="true"{
 	* getAll
 	*/
 	function getAll(){
-		
+		qUsers = queryExecute(
+			"selectT * 
+			 from user"
+		);
+		writeDump(prc.qUsers);
+		return qUsers;
 	}
 
 	/**
