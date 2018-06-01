@@ -3,6 +3,9 @@
 * www.ortussolutions.com
 * ---
 */
+
+
+
 component{
 	// Application properties
 	this.name = hash( getCurrentTemplatePath() );
